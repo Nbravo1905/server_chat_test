@@ -21,7 +21,7 @@ io.on('connection', client => {
 
     await saveMessage(payload);
 
-    io.to( payload.para ).emit('mensaje-personal', payload);
+    io.to( payload.to ).emit('mensaje-personal', payload);
 
   })
 
